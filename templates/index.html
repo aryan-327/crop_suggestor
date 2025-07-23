@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crop Recommendation</title>
+    <!-- ✅ Link CSS properly using Flask's url_for -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Crop Recommendation System</h1>
+    <form method="POST" action="/predict">
+        <label for="N">Nitrogen:</label>
+        <input type="number" name="N" required><br>
+
+        <label for="P">Phosphorus:</label>
+        <input type="number" name="P" required><br>
+
+        <label for="K">Potassium:</label>
+        <input type="number" name="K" required><br>
+
+        <label for="temperature">Temperature (°C):</label>
+        <input type="number" name="temperature" step="any" required><br>
+
+        <label for="humidity">Humidity (%):</label>
+        <input type="number" name="humidity" step="any" required><br>
+
+        <label for="ph">pH:</label>
+        <input type="number" name="ph" step="any" required><br>
+
+        <label for="rainfall">Rainfall (mm):</label>
+        <input type="number" name="rainfall" step="any" required><br>
+
+        <input type="submit" value="Recommend Crop">
+    </form>
+</body>
+</html>
